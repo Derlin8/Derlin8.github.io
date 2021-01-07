@@ -1,0 +1,6 @@
+TODO
+
+Add Two projects and links to them, talk about them. Uno Card Game and PizzaButton
+Flesh out About me and separate projects to different page
+Add blog and paginations
+Add hobbies
