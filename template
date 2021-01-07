@@ -1,0 +1,243 @@
+<html>
+<head lang="en">
+
+	<title>Aaron Kaloti</title>
+
+  	<meta charset="utf-8">
+  	<meta name="viewport"
+    	content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap's CSS part -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Bootstrap's JS part -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+
+	<!-- My own included files -->
+	<link rel="stylesheet" href="stylesheets/index.css" />
+	<script src="javascripts/app.js"></script>
+
+</head>
+<body data-ng-app="personalWebpage" data-ng-cloak>
+<div class="container">
+
+	<!-- <nav class="navbar navbar-default main-page-major-element">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle"
+					data-toggle="collapse" data-target="#my-navbar">
+					<!-- The bars in the button's icon --><!--
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		        </button>
+			</div>
+			<div class="collapse navbar-collapse" id="my-navbar">
+				<ul class="nav navbar-nav" id="navbar-unordered-list">
+					<li id="navbar-home"><a href="#/home">Home</a></li>
+					<li id="navbar-leadership">
+						<a href="#/leadership">Leadership</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> -->
+
+	<ui-view></ui-view>
+
+	<script type="text/ng-template" id="/home.html">
+		<div class="panel panel-default main-page-major-element">
+			<div class="panel-body">
+			
+				<!-- This panel has subpanels using the grid system -->
+				<div class="row">
+
+					<!-- Picture and name panel -->
+					<div class="col-sm-5 col-sm-offset-1
+						panel panel-default" id="me-panel">
+						<div class="panel-body">
+							<!-- Image of Aaron Kaloti (me) -->
+							<img src="images/aaron-kaloti.JPG"
+								class="img-circle img-responsive
+									centered-element"
+								alt="Picture of Aaron Kaloti"
+								height="100" width="100" />
+
+							<div class="centered-text"><h4>Aaron Kaloti</h4></div>
+
+							<div class="centered-text"><b>Tagline:</b>
+							Third-year Computer Science student at UC Davis.</div>
+
+							<div class="centered-text"><b>Objective:</b>
+							Seeing internship for summer of 2018.</div>
+
+							<div class="centered-text"><b>Email:</b> aarons [dot]
+								7007 [at] gmail [dot] com</div>
+						</div>
+					</div>
+
+					<!-- Links panel -->
+					<div class="col-sm-4 col-sm-offset-1
+						panel panel-default" id="links-panel">
+						<div class="panel-body">
+							<div class="list-group">
+								<!-- GitHub link -->
+								<a href="https://github.com/aaronistheman"
+									class="list-group-item link">
+									GitHub
+								</a>
+								<br />
+
+								<!-- Resume link -->
+								<a href="documents/resume.pdf"
+									class="list-group-item link">
+									Resume
+									(Updated: 10/1/2017)
+								</a>
+								<!-- <br /> -->
+
+								<!-- LinkedIn link -->
+								<!-- <a href="https://www.linkedin.com/in/aaron-kaloti-943656107"
+									class="list-group-item link">
+									LinkedIn
+								</a> -->
+							</div>
+						</div>
+					</div>
+
+					<!-- To create left margin for above panel -->
+					<div class="col-sm-0 col-sm-offset-1">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project previews -->
+		<div class="panel panel-default main-page-major-element">
+			<div id="project-previews" class="panel-body">
+				<h1 class="centered-text" id="projects-label">
+					Personal Projects</h1>
+
+				<div data-ng-repeat="ppd in projectPanelData"
+					class="panel panel-default project
+						{{ ppd.bigProjectStatus }}">
+				<div class="panel-body">
+
+					<div class="row">
+						<div class="col-sm-6">
+							<h4><b>{{ ppd.name }}</b>,
+								{{ ppd.dateRangeStr }}</h4>
+
+							<span data-ng-if="ppd.githubLink != NO_GITHUB_REPO">
+								<a href="{{ ppd.githubLink }}">
+								GitHub Repository</a></span><br />
+
+							<span><b>Programming language(s):</b>
+							{{ ppd.programmingLanguagesStr }}</span><br />
+
+							<span data-ng-if="ppd.testingFramework != NO_TEST_FRAMEWORK">
+								<b>Testing framework:</b>
+								{{ ppd.testingFramework }}<br /></span>
+
+							<span><b>Other languages/software used:</b>
+							{{ ppd.otherLanguagesOrSoftwareStr }}</span><br />
+
+							<span data-ng-if="ppd.funNote">
+								<br />
+								<b>Fun note:</b> {{ ppd.funNote }}
+							</span>
+
+							<span data-ng-if="ppd.biggestChallenge">
+								<br />
+								<b>Biggest challenge:</b>
+								{{ ppd.biggestChallenge }}
+							</span>
+
+							<span data-ng-if="ppd.biggestRegret">
+								<br />
+								<b>Biggest regret:</b> {{ ppd.biggestRegret }}
+							</span>
+						</div>
+						<div class="col-sm-6">
+							<img src="{{ ppd.imageData.src }}"
+								class="img-responsive centered-element
+									project-panel-image"
+								alt="Game Picture"
+								width="{{ ppd.imageData.width }}"
+								height="{{ ppd.imageData.height }}" />
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</script> <!-- template: home.html -->
+
+	<script type="text/ng-template" id="/leadership.html">
+		<div class="panel panel-default leadership-panel">
+		<div class="panel-body">
+			<div class="panel panel-default leadership-inner-panel">
+			<div class="panel-body">
+				<h4><b>Review Session Host</b>, October 2016 - Present</h4>
+				<p>As part of the UC Davis Computer Science Tutoring Club, I help with free review sessions for computer science courses.</p>
+
+				<p><b>Number of sessions hosted:</b> 17 (including 6 as co-host)</p>
+				<p><b>Average session length:</b> about 1.93 hours</p>
+				<p><b>Approximate audience sizes</b> range from 15 to 90 people, with average of 40.</p>
+
+				<br />
+				<p>A "timeline" of sessions I helped with is shown below:</p>
+				<ul>
+					<li>Spring Quarter 2017 (4 sessions, including 3 as co-host):
+					<ul>
+						<li>ECS 122A, Algorithm Design (x1, as co-host)</li>
+						<li>ECS 60, Data Structures and Algorithms (x2, both as co-host)</li>
+						<li>ECS 40, Object-Oriented Programming (C++) (x1)</li>
+					</ul>
+					</li>
+				
+					<li>Winter Quarter 2017 (5 sessions, including 1 as co-host):
+					<ul>
+						<li>ECS 122A, Algorithm Design (x1)</li>
+						<li>ECS 40, Object-Oriented Programming (C++) (x1)</li>
+						<li>ECS 10, Introduction to Programming (Python) (x3, 1 as co-host)</li>
+					</ul>
+					</li>
+
+					<li>Fall Quarter 2016 (8 sessions, including 2 as co-host):
+					<ul>
+						<li>ECS 122A, Algorithm Design (x2)</li>
+						<li>ECS 60, Data Structures and Algorithms (x2)</li>
+						<li>ECS 50, CUSP Assembly Language (x2)</li>
+						<li>ECS 10, Introduction to Programming (Python) (x2, both as co-host)</li>
+					</ul>
+					</li>
+				</ul>
+			</div>
+			</div>
+			<div class="panel panel-default leadership-inner-panel">
+			<div class="panel-body">
+				<h4><b>President</b>, Robot Programming Committee, Vanden High School, June 2014 - June 2015</h4>
+				<ul>
+					<li>Got <b>7</b> programmers started on either C++ or Java</li>
+					<li>Promoted use of Git branches</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		</div>
+	</script> <!-- template: leadership.html -->
+
+	<script type="text/ng-template" id="/development-process.html">
+		<p>development-process.html</p>
+	</script> <!-- template: development-process.html -->
+
+</div>
+</body>
+</html>
