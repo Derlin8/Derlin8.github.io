@@ -14,3 +14,6 @@ Add more hobbies
 Add contact forms
 Expand projects and elaborate on github
 Use command line more often
+
+------ 1/8/21 ------
+Note to self: GitHub Pages are case sensitive, not only for folders, but ralso for image names. I.e. quarantrack.jpg != quarantrack.JPG
