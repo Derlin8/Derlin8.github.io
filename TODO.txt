@@ -4,3 +4,13 @@ Add Two projects and links to them, talk about them. Uno Card Game and PizzaButt
 Flesh out About me and separate projects to different page
 Add blog and paginations
 Add hobbies
+
+
+------ 1/7/21 ------
+Post weekly 
+Add more images
+Add more blogs
+Add more hobbies
+Add contact forms
+Expand projects and elaborate on github
+Use command line more often
