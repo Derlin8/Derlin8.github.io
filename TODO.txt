@@ -17,3 +17,10 @@ Use command line more often
 
 ------ 1/8/21 ------
 Note to self: GitHub Pages are case sensitive, not only for folders, but ralso for image names. I.e. quarantrack.jpg != quarantrack.JPG
+
+
+------ 1/9/21 ------
+add blog post
+add page breaks
+paginations perhaps
+expand on pizza button and card game
