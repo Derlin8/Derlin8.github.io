@@ -24,3 +24,8 @@ add blog post
 add page breaks
 paginations perhaps
 expand on pizza button and card game
+
+------ 1/10/21 ------
+Fix images on hobbies
+Add Titles to new sections in hobbies
+Another blog post soon
