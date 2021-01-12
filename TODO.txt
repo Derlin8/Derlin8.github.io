@@ -34,3 +34,6 @@ Another blog post soon
 Add better UI for images in hobbies
 Add paginations
 Add blog post soon
+
+------ 1/12/21 ------
+Bolden dates
