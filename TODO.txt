@@ -29,3 +29,8 @@ expand on pizza button and card game
 Fix images on hobbies
 Add Titles to new sections in hobbies
 Another blog post soon
+
+------ 1/11/21 ------
+Add better UI for images in hobbies
+Add paginations
+Add blog post soon
